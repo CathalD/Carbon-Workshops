@@ -4,7 +4,7 @@
 
 # Blue Carbon Eelgrass Workshop
 
-Materials from the **Blue Carbon Eelgrass Workshop** on measuring sediment carbon stocks in
+Here you will find the materials from the **Blue Carbon Eelgrass Workshop** on measuring sediment carbon stocks in
 seagrass/eelgrass meadows, from the background, through field methods, to
 analysis and reporting
 
