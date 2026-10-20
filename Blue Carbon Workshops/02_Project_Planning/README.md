@@ -11,7 +11,7 @@
 # Part 2 — Project Planning
 ## From a carbon question to a sampling design
 
-**Quick links:** [Sampling Design Guide](Sampling-Design-Eng-2026.pdf) · [Sample Allocation Calculator](BlueCarbon_SampleAllocation_Spreadsheet_V2.xlsx) · [Calculator — Google Sheets copy](https://docs.google.com/spreadsheets/d/1TGLz11ZmWO2EsAF86PMbEYZFO75_X_pKdJPS38a0O-M/edit?usp=sharing) · [Blue Carbon Hub tool](https://blue-carbon-hub.projects.earthengine.app/) · [Coastal Blue Carbon Field Guide](../Coastal-Blue-Carbon-Field-Guide-FINAL.pdf) · [Appendix A — sampling logic](#appendix-a--a-brief-lesson-in-sampling-logic)
+**Quick links:** [Sampling Design Guide](Sampling-Design-Eng-2026.pdf) · [Sample Allocation Calculator](BlueCarbon_SampleAllocation_Spreadsheet_V2.xlsx) · [Calculator — Google Sheets copy](https://docs.google.com/spreadsheets/d/1TGLz11ZmWO2EsAF86PMbEYZFO75_X_pKdJPS38a0O-M/edit?usp=sharing) · [Blue Carbon Hub tool](https://blue-carbon-hub.projects.earthengine.app/) · [Coastal Blue Carbon Field Guide](https://wwf.ca/wp-content/uploads/2026/04/Coastal-Blue-Carbon-Field-Guide-FINAL.pdf) · [Appendix A — sampling logic](#appendix-a--a-brief-lesson-in-sampling-logic)
 
 ---
 
@@ -187,7 +187,7 @@ what has to be decided before field work:
 | Reporting depth | A standard depth every core reaches: 0–15, 0–30, 0–50 or 0–100 cm | The same. Below the base of a core, carbon is estimated, and the deeper the reporting depth goes past your cores, the more of the answer is estimated |
 | Sampling design | Any. A single core is fine — it describes one place | Random or stratified random placement (Step 5) gives an interval. Cores placed by judgement give an **exploratory** estimate with no interval |
 | Precision target | Not needed | Needed for a random design, e.g. ±20% at 90% (Step 4) |
-| Analysis (Part 4) | [Option A](../04_Data_Interpretation/#option-a--what-do-our-samples-tell-us-and-how-do-they-compare) | [Option B](../04_Data_Interpretation/#option-b--what-do-our-measurements-imply-for-this-meadow) |
+| Analysis (Part 4) | [Option A](../04_Results/) | [Option B](../04_Results/) |
 
 ## Step 1 — Define your study area
 
@@ -466,7 +466,7 @@ Enter an area, a margin of error, and a confidence level; the sheet returns the 
 
 This is the **Sample Allocation Calculator** named in Step 3 of the [Sampling Design guide](Sampling-Design-Eng-2026.pdf) (p.16), which uses the central limit theorem to estimate the minimum number of plots needed to hit a target precision for a large area.
 
-**Sheet 1** returns the total *n* for the whole study area. **Sheet 2** splits that *n* across the strata from Step 2, proportional to area — used in Step 5. **Sheet 3** holds the regional priors, **sheet 4** checks the precision you achieved after fieldwork ([Appendix A8](#a8--after-the-campaign-did-you-hit-your-target)), and **sheet 5** shows how *n* responds to the CV and the margin of error ([Appendix A4](#a4--what-actually-drives-sample-size)). A separate [Tsawwassen copy](BlueCarbon_SampleAllocation_Spreadsheet_V2_Tsawwassen_Example.xlsx) has the worked example's inputs entered. On each sheet, *Plots are the sampling frame?* stays **No** unless your cores are drawn from a fixed list of plots ([Appendix A3](#a3--cochrans-correction-why-big-areas-stop-needing-more-cores)).
+**Sheet 1** returns the total *n* for the whole study area. **Sheet 2** splits that *n* across the strata from Step 2, proportional to area — used in Step 5. **Sheet 3** holds the regional priors, **sheet 4** checks the precision you achieved after fieldwork ([Appendix A8](#a8--after-the-campaign-did-you-hit-your-target)), and **sheet 5** shows how *n* responds to the CV and the margin of error ([Appendix A4](#a4--what-actually-drives-sample-size)). A separate [Tsawwassen copy](../resources.md#pending-materials) has the worked example's inputs entered. On each sheet, *Plots are the sampling frame?* stays **No** unless your cores are drawn from a fixed list of plots ([Appendix A3](#a3--cochrans-correction-why-big-areas-stop-needing-more-cores)).
 
 </td>
 </tr>
@@ -518,7 +518,7 @@ There are four common strategies for distributing samples. Which one fits depend
 | **Stratified-random** | Strata first, then plots randomly assigned within each. This is the most accurate and cost-effective strategy. |
 | **Convenience/practical** | Plots wherever is accessible. While not statistically rigorous, it is useful for a low-cost initial assessment — Part 4 reports it as an *exploratory* estimate, without a confidence interval. |
 
-> See WWF-Canada, *[Measuring Carbon in Coastal Sediments](../Coastal-Blue-Carbon-Field-Guide-FINAL.pdf)* (2026), p.6.
+> See WWF-Canada, *[Measuring Carbon in Coastal Sediments](https://wwf.ca/wp-content/uploads/2026/04/Coastal-Blue-Carbon-Field-Guide-FINAL.pdf)* (2026), p.6.
 
 </details>
 

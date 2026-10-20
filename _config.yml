@@ -1,0 +1,31 @@
+title: Carbon Workshops
+description: Ecosystem carbon workshop guides, field methods and resources
+baseurl: /Carbon-Workshops
+markdown: kramdown
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+kramdown:
+  input: GFM
+  parse_block_html: true
+readme_index:
+  enabled: true
+  remove_originals: true
+  with_frontmatter: true
+relative_links:
+  enabled: true
+exclude:
+  - scripts
+  - Gemfile
+  - Gemfile.lock
+  - SITE_GUIDE.md
+  - 'Blue Carbon Workshops/01_Background/images/README.md'
+  - 'Blue Carbon Workshops/01_Background/images/TODO.md'
+  - 'Blue Carbon Workshops/02_Project_Planning/Sampling Design Tools'
