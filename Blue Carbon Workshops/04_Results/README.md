@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/banner_data_interpretation.svg" alt="Data Interpretation — Blue Carbon Eelgrass Workshop banner" width="100%">
+</p>
+
 *From sediment samples to carbon-stock estimates.*
 
 [← 3 — Field Methods](../03_Field_Methods/) · [Back to main guide](../README.md)
