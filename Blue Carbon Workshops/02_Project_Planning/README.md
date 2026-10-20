@@ -645,7 +645,7 @@ Steps 1–5 don't require any of this. But if you want to know why the calculato
 | [A3](#a3--cochrans-correction-why-big-areas-stop-needing-more-cores) | Cochran's correction | Step 4 |
 | [A4](#a4--what-actually-drives-sample-size) | What actually drives sample size | Step 4 |
 | [A5](#a5--the-proportion-form) | The proportion form | Step 4 |
-| [A6](#a6--symbol-crosswalk-to-the-unfccc-a64-tool) | Symbol crosswalk to the UNFCCC A6.4 tool | Step 4 |
+| A6 (planned) | Symbol crosswalk to the UNFCCC A6.4 tool | Step 4 |
 | [A7](#a7--proportional-allocation-across-strata) | Proportional allocation across strata | Step 5 |
 | [A8](#a8--after-the-campaign-did-you-hit-your-target) | After the campaign: did you hit your target? | Step 4 |
 
@@ -703,12 +703,12 @@ $$n \geq \frac{z^2\, N\, CV^2}{(N-1)\,E^2 + z^2\, CV^2}$$
 Therefore, a 1 ha site holds 100 plots, and the correction trims 17 cores to 15. Tsawwassen's 33 cores, from about 107,500 possible positions, cover 0.03% of them, and the correction changes nothing.
 
 As $N$ grows, $(N-1)E^2$ dominates the denominator and the correction fades, the formula converges, and thats why the effect of area **plateaus** or levels off
+
 ---
 
 ### A4 — What actually drives sample size
 
-*The math behind [Step 4](#step-4--decide-how-many-samples).
-```
+*The math behind [Step 4](#step-4--decide-how-many-samples).*
 
 | Knob | Turn it… | Effect on *n* | Why |
 |---|---|---|---|

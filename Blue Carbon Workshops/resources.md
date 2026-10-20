@@ -24,7 +24,7 @@ title: Downloads & Resources
 - [Coastal Blue Carbon workshop video playlist](https://www.youtube.com/playlist?list=PLLsjpJMfNDP5w78ZJNDUvMj1VoRG_qSwd)
 - [WWF-Canada Carbon Measurement library](https://wwf.ca/carbon-measurement/)
 
-## Materials still to be added {#pending-materials}
+<h2 id="pending-materials">Materials still to be added</h2>
 
 The workshop text refers to the following materials, which are not present in this repository yet. They are listed here so readers can see their availability before trying to download them.
 

@@ -1,8 +1,9 @@
 title: Carbon Workshops
 description: Ecosystem carbon workshop guides, field methods and resources
 baseurl: /Carbon-Workshops
-markdown: kramdown
+markdown: CommonMarkGhPages
 plugins:
+  - jekyll-commonmark-ghpages
   - jekyll-optional-front-matter
   - jekyll-readme-index
   - jekyll-relative-links
@@ -12,9 +13,9 @@ defaults:
       path: ''
     values:
       layout: default
-kramdown:
-  input: GFM
-  parse_block_html: true
+commonmark:
+  options: [UNSAFE, SMART, FOOTNOTES]
+  extensions: [strikethrough, autolink, table, tagfilter]
 readme_index:
   enabled: true
   remove_originals: true
