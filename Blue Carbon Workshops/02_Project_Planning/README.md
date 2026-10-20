@@ -663,7 +663,7 @@ What remains is the fieldwork itself. **Section 3** covers what to bring, how to
 
 *and the derivations that drive this work*
 
-Steps 1–5 don't require any of this. But if you want to know why the calculator behaves the way it does, or you need to defend a sample size to a reviewer, it's all here — in the order the ideas actually build on each other.
+Steps 1–5 don't require any of this. But if you want to know why the calculator behaves the way it does, we derive it below:
 
 | | | Used in |
 |---|---|---|
@@ -680,15 +680,13 @@ Steps 1–5 don't require any of this. But if you want to know why the calculato
 
 ### A1 — What an estimate actually is
 
-*The machinery behind the [Background](#background-what-sampling-is-and-why-it-works) section.*
+*The math behind the [Background](#background-what-sampling-is-and-why-it-works) section.*
 
-You core a subset of plots and average them. That average, $\bar{x}$, is your estimate of the meadow's true mean carbon.
+First, you core a subset of plots and average them. That average, $\bar{x}$, is your estimate of the eelgrass sediments true mean carbon.
 
 How far off might it be? That depends on two things: how much the plots differ from each other (the standard deviation, $s$) and how many you took ($n$). Combined, they give the **standard error of the mean**:
 
 $$SE = \frac{s}{\sqrt{n}}$$
-
-The $\sqrt{n}$ is the whole story of sampling economics. Four times the cores buys you *twice* the precision — never four times.
 
 The **margin of error** scales that standard error by a multiplier set by your confidence level:
 
@@ -700,9 +698,9 @@ where $z = 1.282$ at 80% confidence, $1.645$ at 90%, and $1.96$ at 95%. Writing 
 
 ### A2 — Working backwards: from precision to sample size
 
-*The machinery behind [Step 4](#step-4--decide-how-many-samples).*
+*The math behind [Step 4](#step-4--decide-how-many-samples).*
 
-Everything in A1 runs in reverse. If you know the precision you want, you can solve for the $n$ that delivers it.
+Everything we show above can run in reverse. If you know the precision you want, you can solve for the $n$ that delivers it.
 
 Start from the margin-of-error definition and solve for $n$:
 
@@ -712,44 +710,31 @@ Then replace $s/\bar{x}$ with the **coefficient of variation**, $CV$:
 
 $$n = \left(\frac{z \cdot CV}{E}\right)^{2}, \qquad CV = \frac{s}{\bar{x}}$$
 
-Expressing variability as a $CV$ makes the result **scale-free** — it no longer depends on whether carbon is measured in Mg C ha⁻¹, g cm⁻³, or anything else. A meadow with $CV = 0.5$ needs the same number of cores whether it holds 40 or 400 Mg C ha⁻¹.
+Expressing variability as a $CV$ makes the result **scale-free**, meaning it no longer depends on whether carbon is measured in Mg C ha⁻¹, g cm⁻³, or anything else. An estimate with $CV = 0.5$ needs the same number of cores whether it holds 40 or 400 Mg C ha⁻¹.
 
-Notice what's squared: **$z$, $CV$ and $E$**. That single fact explains almost everything in A4.
+Notice what's squared: **$z$, $CV$ and $E$**.
 
-This form treats the meadow as **continuous** — any point could be sampled — and it is the default in this workshop and in Part 4. [A3](#a3--cochrans-correction-why-big-areas-stop-needing-more-cores) covers the small adjustment for sampling from a fixed list of plots.
 
 ---
 
 ### A3 — Cochran's correction: why big areas stop needing more cores
 
-*The machinery behind [Step 4](#step-4--decide-how-many-samples).*
+*The math behind [Step 4](#step-4--decide-how-many-samples).*
 
-**One modelling choice everything depends on:** each core is taken to represent a **plot, not a pinprick**. This workshop uses a **10 × 10 m plot (100 m²)** per core. Two cores 3 m apart claim the same plot, so they are one observation, not two — they are averaged before any estimate.
+**One choice we made** was to represent each core as a **plot, not a point**. This workshop uses a **10 × 10 m plot (100 m²)** per core, which allow sus to adjust for spatial-autocorrelation, meaning the values of 2 cores being related to eachother due to distance. By spacing our cores out, we are ensuring we reduce this as much as possible.
 
-Suppose the possible plots are a **fixed list** — for example, the sampling tool's grid of 100 m² core positions — and you pick $n$ of them at random, never the same one twice. Then the population really is finite: a study area of $A$ m² holds $N = A \div a$ plots of $a$ m² each. Once you have sampled a large share of them, there is less left to be uncertain about. Cochran's **finite-population correction** gives you credit for that:
+Suppose the possible plots are a **fixed number**, for example, the sampling tool's grid of 100 m² core positions, and you pick $n$ of them at random, never the same one twice. Then the population really is finite: a study area of $A$ m² holds $N = A \div a$ plots of $a$ m² each. Once you have sampled a large share of them, there is less left to be uncertain about. Cochran's **finite-population correction** gives you credit for that:
 
 $$n \geq \frac{z^2\, N\, CV^2}{(N-1)\,E^2 + z^2\, CV^2}$$
 
-**Use it only when the plots really are the sampling frame.** If cores go to random points in a continuous meadow, there is no fixed list to exhaust, and A2's form applies. In practice the choice rarely matters. The correction only bites when you sample a sizeable share of all plots: a 1 ha site holds 100 plots, and the correction trims 17 cores to 15. Tsawwassen's 33 cores, from about 107,500 possible positions, cover 0.03% of them, and the correction changes nothing.
+Therefore, a 1 ha site holds 100 plots, and the correction trims 17 cores to 15. Tsawwassen's 33 cores, from about 107,500 possible positions, cover 0.03% of them, and the correction changes nothing.
 
-As $N$ grows, $(N-1)E^2$ dominates the denominator and the correction fades — the formula converges on A2. That's why the effect of area **plateaus**.
-
+As $N$ grows, $(N-1)E^2$ dominates the denominator and the correction fades, the formula converges, and thats why the effect of area **plateaus** or levels off
 ---
 
 ### A4 — What actually drives sample size
 
-*The machinery behind [Step 4](#step-4--decide-how-many-samples). If you read one appendix section, read this one.*
-
-Four inputs dominate, and two of them sit **squared** in the formula.
-
-All numbers below use a round-number baseline, typical of coastal MMRV work: **±20% margin of error**, **90% confidence**, $CV$ = 0.5 → **17 cores**, with the area treated as continuous (A2). The Tsawwassen prior, $CV$ = 0.68, gives 32. One knob turned at a time:
-
-```
-                                              cores needed (from 17)
-  Precision      ±20% → ±10%     ████████████████████████  68
-  Variability    CV 0.5 → 1.0    ████████████████████████  68
-  Confidence     90% → 95%       ██████                    25
-  Study area     5 ha → 500 ha   ████                      17
+*The math behind [Step 4](#step-4--decide-how-many-samples).
 ```
 
 | Knob | Turn it… | Effect on *n* | Why |
@@ -761,19 +746,19 @@ All numbers below use a round-number baseline, typical of coastal MMRV work: **�
 
 Three things here routinely surprise people.
 
-**CV is the hidden driver.** It's squared, exactly like $E$ — so a meadow twice as patchy needs **four times** the cores. This is why a good variability prior matters more than almost any other input, and why you pad the SD when you're unsure. It is also the one input you don't control: the meadow is as variable as it is.
+**CV is the hidden driver.** It's squared, exactly like $E$, so an area twice as patchy needs **four times** the cores. This is why a good variability prior matters more than almost any other input. It is also the one input you don't control: the ecosystem is as variable as it is.
 
 **Precision is expensive; confidence is cheaper.** Tightening $E$ from ±20% to ±10% quadruples the fieldwork. Raising confidence from 90% to 95% costs about half as much again. **If the budget is fixed, loosening $E$ buys back far more cores than dropping confidence.**
 
-**Area doesn't matter.** You're estimating a *mean*, and pinning down a mean depends on how variable the meadow is, not on how big it is. A meadow a hundred times larger needs the same number of cores. Only for a very small site sampled from a fixed list of plots does the correction in A3 trim a core or two. This is the single most counter-intuitive result in sampling design, and the one most worth being able to explain to a funder: **a bigger site is not a more expensive survey.**
+**Area doesn't matter.** You're estimating a *mean*, and pinning down a mean primarily depends on how variable the meadow is, not on how big it is. A meadow a hundred times larger needs the same number of cores. Only for a very small site sampled from a fixed list of plots does the correction reduce the requires number of samples. This is the single most counter-intuitive result in sampling design, **a bigger site is not a more expensive survey.**
 
 ---
 
 ### A5 — The proportion form
 
-*The machinery behind [Step 4](#step-4--decide-how-many-samples), when the thing you're estimating isn't a mean.*
+*The math behind [Step 4](#step-4--decide-how-many-samples), when the thing you're estimating isn't a mean.*
 
-Everything above estimates a **continuous** variable — carbon stock. Some questions are instead about a **proportion**: what fraction of cores contain a peat horizon, what percentage of the meadow is still vegetated. Those use a parallel formula:
+Everything above estimates a **continuous** variable, which is a carbon stock. Some questions are instead about a **proportion**: what fraction of cores contain a peat horizon, what percentage of the meadow is still vegetated. Those use a parallel formula:
 
 $$n \geq \frac{z^2\, N\, p\,q}{(N-1)\,E^2 p^2 + z^2\, p\, q}, \qquad q = 1-p$$
 
@@ -781,27 +766,9 @@ where $p$ is the expected proportion. **Use $p = 0.5$ when you have no prior** �
 
 ---
 
-### A6 — Symbol crosswalk to the UNFCCC A6.4 tool
-
-*Useful if you're cross-referencing the [UNFCCC A6.4 Sampling & Surveys tool](Sampling-Design-Eng-2026.pdf) or its calculator.*
-
-| This guide | UNFCCC tool | Meaning |
-|---|---|---|
-| $z$ | $Z_{\alpha/2}$ | z-multiplier set by confidence level |
-| $E$ | $e_{abs}$ | target **relative** precision (0.20 = ±20% of the mean) |
-| $s$ | $SD$ | expected standard deviation (your prior) |
-| $\bar{x}$ | mean | expected mean (your prior) |
-| $CV$ | $CV$ | coefficient of variation, $s/\bar{x}$ |
-| $N$ | $N$ | population size: the number of plots in the sampling frame — see note |
-| $n$ | $n$ | number of plots/cores to collect |
-
-> **Where the two calculators differ — and it's only one thing.** The formula is identical. They differ in how $N$ is obtained: the WWF-Canada area-based calculator derives it from **total area ÷ plot size** (when you choose to treat the plots as the sampling frame), while the UNFCCC tool takes a **population count** directly. Because $(N-1)$ barely moves the result once $N$ is large, both converge on the same answer — which is exactly the plateau described in [A4](#a4--what-actually-drives-sample-size).
-
----
-
 ### A7 — Proportional allocation across strata
 
-*The machinery behind [Step 5](#step-5--decide-where-the-samples-go).*
+*The math behind [Step 5](#step-5--decide-where-the-samples-go).*
 
 Each stratum receives a share of the total $n$ proportional to its area:
 
@@ -815,7 +782,7 @@ Then two practical rules are applied on top: round each $n_h$ **up** to a whole 
 
 ### A8 — After the campaign: did you hit your target?
 
-*The machinery behind the check you run once [Step 4](#step-4--decide-how-many-samples)'s cores come back.*
+*The math behind the check you run once [Step 4](#step-4--decide-how-many-samples)'s cores come back.*
 
 Sample-size planning uses *expected* variability. Real cores may be more or less variable than your prior assumed, so before trusting the estimate, check the **achieved** precision against the target you set.
 
@@ -834,15 +801,6 @@ The calculator's *4 Precision Check* sheet does this for you, and Part 4's Optio
 
 <img width="100%" alt="Sample Allocation Calculator, sheet 4 Precision Check: the cores collected, sample mean and SD go in; the standard error, t multiplier and relative margin of error come out, with a pass or miss against the target" src="images/calculator_precision_check.png">
 
-**If you miss the target:**
-
-1. **Check the records** — transcription slips, units, a mislabelled core. Correct what was recorded wrongly. Never remove a value just because it widens the interval.
-2. **Report the precision you achieved.** An estimate that missed its target is still the estimate. Say so plainly, with its interval.
-3. **Plan the next survey with the CV you measured.** Step 4 then tells you how many more cores would close the gap.
-
-Two shortcuts make a result look more certain than it is, so avoid them. One is drawing new strata after seeing the carbon values: post-stratification is only sound when the strata and their areas are defined independently of the results, ideally before fieldwork. The other is quoting only the lower end of the interval as "the" estimate.
-
-This comparison — not the planned sample size — is what you report and what a reviewer will check.
 
 ---
 
@@ -852,36 +810,5 @@ This comparison — not the planned sample size — is what you report and what 
 - [`Sampling-Design-Eng-2026.pdf`](Sampling-Design-Eng-2026.pdf) — the WWF-Canada sampling-design guide
 - `images/` — screenshots of the calculator and planning materials
 
-<details>
-<summary><b>📋 Slide/screenshot layout template — copy/paste this to add an image</b></summary>
-
-Each image is a two-column block: the image on the left and a description on the right.
-To add one, copy the block below and:
-
-1. In GitHub's editor, click inside the left cell (between the blank lines) and **paste or drag your image** — or paste the image URL into `src="…"`.
-2. Type your description in the right cell (plain text, **markdown**, links, and lists all work).
-
-Keep the blank lines inside the cells — they're what let GitHub render the pasted image and formatted text.
-
-```html
-<table>
-<tr>
-<td width="45%">
-
-<img width="100%" alt="Image description" src="PASTE_IMAGE_URL_HERE">
-
-</td>
-<td width="55%">
-
-Paste your description here.
-
-</td>
-</tr>
-</table>
-```
-
-</details>
-
----
 
 [← 1 — Background](../01_Background/) · [Back to main guide](../README.md) · Next: [3 — Field Methods →](../03_Field_Methods/)
