@@ -39,52 +39,50 @@ The goal of the workshop is to:
 
 1. **Learn about blue carbon in Canada** — what it is and why it matters.
 2. **Learn field methods for measuring it** — how to collect and process sediment cores.
-3. **Turn measurements into outputs** — convert field data into carbon analyses to inform decision making.
+3. **Turn measurements into outputs** — convert field data into carbon outputs to inform decision making.
 
 <!-- TODO (Cathal): add an "Eelgrass Workshop Skills Checklist" here. -->
 
 ## How to think about this workshop
 
-This is an *eelgrass carbon* workshop: at its heart, it is about collecting the data needed to
-quantify carbon in an ecosystem. The clearest way to see what a team needs to collect is to
-start from the **data sheet** the analysis is built on, and work back from there. See the data sheet attached, each heading represents something
-real we measure in the ecosystem, such as a depth of sediment, a weight, a carbon concentration, and
+At its core, this workshop is about collecting the data needed to
+quantify carbon in the sediments of an ecosystem. The clearest way to see what a team needs to achieve this goals and collect the right information is to
+start from the **data sheet** the analysis is built on, and work back from there. See the data sheet attached, each heading represents something measured
+in the ecosystem, such as a depth of sediment, its weight, a carbon concentration, and
 once the sheet is complete, those numbers let us calculate carbon stock, compare areas, and
 inform decisions.
 
 The workshop therefore focuses on two things, in the order you'd do them:
 
-1. **Making the data useful** — making sure that *before* you collect anything, the samples you
+1. **Making the data useful**; making sure that *before* you collect anything, the samples you
    plan to take will actually answer your team's questions and contribute to your organizational
    goals.
 
-2. **Collecting the data** following best practices, in line with what the **data sheet** asks for.
+2. **Collecting the data**; following best practices, in line with what the **data sheet** asks for.
 
-These two phrases — *making the data useful* and *collecting the data* — come back throughout the
-workshop as the names for these two jobs.
 
 Take some time to explore the data sheet in both forms: a
 [blank sheet](04_Data_Interpretation/files/Eelgrass_Carbon_DigitalData_BlankSheet.xlsx) to fill
 in for your own site, and a
 [worked example](04_Data_Interpretation/files/Eelgrass_Carbon_DigitalData_Example.xlsx) with data
-already entered so you can follow along. The example data is constructed for teaching — it is not
-from a real survey. Throughout, the workshop covers why we collect each piece of data, what it
+already entered so you can follow along. The example data is for teaching purposes only and it is not
+from a real field outing. Throughout, the workshop covers why we collect each piece of data, what it
 is, how it is measured, and how it connects to your goals.
 
 [**Section 2 — Project Planning**](02_Project_Planning/) is the **making the data useful** component, covering how anyone can begin
-designing the sampling plan so the data you'll collect is worth collecting. [**Section 3 — Field
+designing the sampling plan so the data you'll collect is most effective. [**Section 3 — Field
 Methods**](03_Field_Methods/) is the **collecting the data** component. It covers taking the cores that fill the
 sheet. Done together, they ensure your samples are collected effectively and with best
 practices — so the data best supports your project and organizational goals.
 [**Section 4 — Data Interpretation**](04_Data_Interpretation/) then turns the completed sheet
 into carbon estimates.
 
-**👉 The data sheet we're building toward:** [digital data sheet (Google Sheets)](https://docs.google.com/spreadsheets/d/1XMA_zaFNKtxCw2tAiQa3gHaIiT_wJAecmwW7Rz4hhaQ/edit?usp=sharing)
+**The data sheet we're building toward:** [digital data sheet (Google Sheets)](https://docs.google.com/spreadsheets/d/1XMA_zaFNKtxCw2tAiQa3gHaIiT_wJAecmwW7Rz4hhaQ/edit?usp=sharing)
 · a fully worked copy lives in [`Worked_Example/`](Worked_Example/).
 
 | What the sheet captures | Filled in during | Covered in |
 |---|---|---|
-| Plot & core log (location, depths, corer) | the field | [Section 3](03_Field_Methods/) |
+| Plot & core information (location, depths, corer) | the field | [Section 3](03_Field_Methods/) |
 | Sample slices (depths, notes) | the field | [Section 3](03_Field_Methods/) |
 | Lab results (weights, %C) | after the lab | [Section 4](04_Data_Interpretation/) |
 | Bulk density, carbon stock | calculated for you | [Section 4](04_Data_Interpretation/) |
