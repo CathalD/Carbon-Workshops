@@ -1,5 +1,4 @@
-<p align="center">
-  <img src="images/banner_background.svg" alt="Background — Blue Carbon Eelgrass Workshop banner" width="100%">
+<p align="center">  <img src="images/banner_background.svg" alt="Background — Blue Carbon Eelgrass Workshop banner" width="100%">
 </p>
 
 ---
@@ -27,10 +26,10 @@ centuries to millennia.
 
 Two common concepts used to describe blue carbon ecosystems are **sequestration** and **storage**
 
-1. **Sequestration** — Describes the process of living plants pulling CO₂ out of the water and atmosphere.
-2. **Storage** — When sequestered carbon remains in the ecosystem, we say it is a "carbon store". The bulk of the carbon accumulates in the *sediment* beneath the
-   meadow, not in the plants themselves. This is why our sampling focuses on
-   sediment cores rather than biomass alone.
+1. **Sequestration** describes the process of living plants pulling CO₂ out of the water and atmosphere.
+2. **Storage** is when sequestered carbon remains in the ecosystem, we say it is a "carbon store". The bulk of the carbon accumulates in the *sediment* beneath the
+   surface, and therefore why our sampling focuses on
+   sediment cores rather than plant biomass alone.
 
 <table>
 <tr>
@@ -131,27 +130,29 @@ state", or simply "net ecosystem carbon balance"
 <td width="40%">
 
 Healthy ecosystems accumulate carbon over time and respond resiliently to
-environmental and human-caused disturbances.
+environmental and human-caused disturbances, meaning if carbon is lost abruptly, they can recover it.
 
 </td>
 </tr>
 </table>
 
 We can visualize this with a graph: The balance of carbon entering the ecosystem
-(green), the loss of carbon (red), and the net balance of these two processes (black).
+(green), the loss of carbon (red), and the net balance of these two processes (black) from the [Ecosystem Carbon Accumulation Visualizer](https://cathald.github.io/CarbonAccumulationVisualizer/)
 
 <table>
 <tr>
 <td width="60%">
 
-<img width="100%" alt="Ecosystem carbon accumulation curve reaching equilibrium" src="images/download%20(Null).gif">
+<img width="100%" alt="Ecosystem carbon accumulation curve reaching equilibrium" src="images/carbon_accumulation_equilibrium_keyframe.png">
+
+<sub>▶ <a href="images/carbon_accumulation_equilibrium.gif">Watch the animation</a></sub>
 
 </td>
 <td width="40%">
 
 Here is an ecosystem carbon curve, showing the baseline accumulation of carbon over
-time. As sequestration (carbon in) and loss (carbon out) converge, the amount of carbon
-stored in the ecosystem levels off at a "peak," or equilibrium (represented by the dashed line)
+time. As carbon coming in and carbon going out converge, the amount of carbon
+stored in the ecosystem levels off at a "peak," or equilibrium (represented by the dashed line).
 
 </td>
 </tr>
@@ -161,13 +162,15 @@ stored in the ecosystem levels off at a "peak," or equilibrium (represented by t
 <tr>
 <td width="60%">
 
-<img width="100%" alt="Carbon curve with a single disturbance, then recovery" src="images/download%20(pulse).gif">
+<img width="100%" alt="Carbon curve with a single disturbance, then recovery" src="images/carbon_disturbance_and_recovery_keyframe.png">
+
+<sub>▶ <a href="images/carbon_disturbance_and_recovery.gif">Watch the animation</a></sub>
 
 </td>
 <td width="40%">
 
-And here is the same ecosystem, but with a disturbance that causes a loss and
-recovery of carbon.
+And here is the same ecosystem, but with a single disturbance at year 40: the stored
+carbon drops sharply, then recovers towards the same equilibrium.
 
 </td>
 </tr>
@@ -180,7 +183,9 @@ degrade over time, becoming a net emitter of carbon and losing the carbon it had
 <tr>
 <td width="60%">
 
-<img width="100%" alt="Overlapping pulse and press disturbances driving ecosystem collapse" src="images/download.gif">
+<img width="100%" alt="Overlapping pulse and press disturbances driving ecosystem collapse" src="images/carbon_pulse_press_collapse_keyframe.png">
+
+<sub>▶ <a href="images/carbon_pulse_press_collapse.gif">Watch the animation</a></sub>
 
 </td>
 <td width="40%">
@@ -201,6 +206,7 @@ Explore how carbon accumulates in coastal ecosystems over time with the interact
 tool built for this workshop:
 
 **👉 [cathald.github.io/CarbonAccumulationVisualizer](https://cathald.github.io/CarbonAccumulationVisualizer/)**
+
 
 ---
 ## What is sediment anyway?
