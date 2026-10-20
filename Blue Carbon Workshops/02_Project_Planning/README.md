@@ -22,7 +22,7 @@
 3. **How much data do I need?** How many samples is enough? What is our capacity to meet this?
 4. **Where should the samples be collected from?**
 
-Answering these is what a **sampling design** aims to achieve. It turns a carbon question into a field plan: a number of cores, and a set of sampling coordinates.
+Answering these is what a **sampling design** aims to achieve. It turns a carbon question into a field plan: a number of cores, and a set of sampling coordinates aligned with a desired outcome.
 
 This section covers the five steps of a sampling design.
 
@@ -46,12 +46,18 @@ This section covers the five steps of a sampling design.
 
 *Used in Steps 1, 2 and 5.*
 
+Insert image here - <img width="587" height="380" alt="image" src="https://github.com/user-attachments/assets/c7c9226e-72a9-4dc2-874d-82bd60d4b614" />
+
+
 </td>
 <td width="50%">
 
 **📄 [Sample Allocation Calculator](BlueCarbon_SampleAllocation_Spreadsheet_V2.xlsx)** A simple spreadsheet for estimating sample size.
 
 *Used in Step 4.*
+
+Insert this image - <img width="337" height="233" alt="image" src="https://github.com/user-attachments/assets/c30273c4-6855-455f-843f-0f0620db232f" />
+
 
 </td>
 </tr>
@@ -88,13 +94,22 @@ The more samples you take, the closer your estimate is likely to be to the true 
 |---|---|---|
 | **Estimate** | $\bar{x}$ | The average carbon value across your sampled plots. |
 | **Confidence level** | $1-\alpha$ | How often this procedure would capture the true value if repeated. At 95% confidence, about 95 out of every 100 samples would fall within this range of values. |
-| **Margin of error** | $E$ | How precise that estimate is, or in words, the distance from the estimate to the edge of the interval, usually given relative to the mean (e.g. ±10%). |
+| **Margin of error** | $E$ | How precise that estimate is, or in other words, the distance from the estimate to the edge of the interval, usually given relative to the mean (e.g. ±10%). |
 
-> Put together: *"mean carbon = 100 ±10, at 95% confidence."*
+> Put together: An example carbon estimate might be *"mean carbon = 100 ±10, at 95% confidence."*
 
 ### Seeing it on a map
 
-These clips come from the **[Sample Size Visualization Tool](https://blue-carbon-hub.projects.earthengine.app/)**.
+To visualize how this works, imagine you have an area of land you are interested in measuring carbon, your study area. The study area can be sectioned into possible plot locations, which are the squares below. A sample or small portion of this squares will be measured for carbon. To estimate the entire study area, the average of all of samples will be calculated, (The orange line) along with how a range in which 90% of the samples will fall within (the light orange box around the mean), with an expected degree of error, which tells us if we were to run this over again, how likely would the mean fall within the orgaone box.
+
+<p align="center">
+  <img src="images/sampling_explainer.svg" alt="A grid of carbon values across a study area with eight sampled plots circled, and an arrow to the estimate and its margin of error" width="84%">
+</p>
+
+To help experiment with how the different inputs affect sampling, please see this  **[Sample Size Visualization Tool](https://blue-carbon-hub.projects.earthengine.app/)**.
+
+
+The clips below come from the **[Sample Size Visualization Tool](https://blue-carbon-hub.projects.earthengine.app/)**.
 
 <table>
 <tr>
