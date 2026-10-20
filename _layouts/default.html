@@ -8,7 +8,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{% if display_title %}{{ display_title | escape }} · {% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.description | default: site.description | escape }}">
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   <script>
     window.MathJax = {tex: {inlineMath: [['$', '$'], ['\\(', '\\)']], displayMath: [['$$', '$$'], ['\\[', '\\]']]}};
   </script>
@@ -17,12 +16,12 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">C</span><span>Carbon Workshops<small>Learn. Plan. Measure.</small></span></a>
-    <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">All workshops</a><a href="{{ '/Blue Carbon Workshops/resources.html' | relative_url }}">Resources</a></nav>
+    <a class="brand" href="{{ '/' | relative_url }}"><span>Carbon Workshops<br><small>Learn. Plan. Measure.</small></span></a>
+    <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}">All workshops</a> · <a href="{{ '/Blue Carbon Workshops/resources.html' | relative_url }}">Resources</a></nav>
   </header>
   <div class="site-grid">
     <aside class="sidebar" aria-label="Workshop navigation">
-      <details open>
+      <details>
         <summary>Explore workshops</summary>
         {% for workshop in site.data.workshops %}
         <div class="nav-group">
