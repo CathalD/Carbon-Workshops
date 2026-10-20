@@ -1,26 +1,10 @@
 # Worked Example
 
-*Two threads, followed end to end: planning a campaign, and analysing real cores.*
-
 [← Back to the main guide](../README.md)
 
 ---
 
-This folder holds the workshop's worked examples, so you can see what a finished project looks
-like before (or while) you do your own. They come from two places, and they are kept apart on
-purpose:
-
-<p align="center">
-  <img src="images/two_track_examples.svg" alt="Two tracks: Tsawwassen, constructed for teaching, covers Part 2 planning and Part 3 field practice; the example then switches to Cowichan, published measurements, which runs from lab results through the workbook and Options A and B to the report" width="100%">
-</p>
-
-| Stage | Example | File |
-|---|---|---|
-| Plan (Part 2) | Tsawwassen — constructed team, real tool run | [`02_Project_Planning.md`](02_Project_Planning.md) · [calculator copy](../02_Project_Planning/BlueCarbon_SampleAllocation_Spreadsheet_V2_Tsawwassen_Example.xlsx) |
-| Field practice (Part 3) | Tsawwassen core `WWF-01-A` — constructed | [filled-in field sheet](../03_Field_Methods/datasheets/Eelgrass_Carbon_Datasheet_Example.pdf) |
-| Lab results (Part 4) | Cowichan — published values, mock lab layout | [`Example_Lab_Results.xlsx`](../04_Data_Interpretation/files/Example_Lab_Results.xlsx) |
-| Checked workbook (Part 4) | Cowichan — published, dry weights reconstructed | [`Eelgrass_Carbon_DigitalData_Example.xlsx`](../04_Data_Interpretation/files/Eelgrass_Carbon_DigitalData_Example.xlsx) |
-| Option A and B reports (Part 4) | Cowichan — Option B area hypothetical | [Option A](../04_Data_Interpretation/DataAnalysisWorkflow/example_reports/cowichan_report_option_A.html) · [Option B](../04_Data_Interpretation/DataAnalysisWorkflow/example_reports/cowichan_report_option_B.html) |
+Here we will show hypothetical examples for 2 different project:
 
 | Part | Example | Data |
 |---|---|---|
