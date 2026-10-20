@@ -173,7 +173,7 @@ Five steps take you from a site location to a cooler full of samples.
 
 Across your plot, use a metal rod or soil probe to test how deep the sediment is. This gives
 you a rough idea of how far you will need to insert the corer, and where to take the core in a
-**representative area** — a spot consistent with the average sediment depth across the plot.
+**representative area**, a spot consistent with the average sediment depth across the plot.
 
 </td>
 </tr>
@@ -188,7 +188,7 @@ you a rough idea of how far you will need to insert the corer, and where to take
 **Find the depth of refusal**
 
 A soil probe inserted into the sediment (as shown alongside) helps gauge the transition from
-sediment to parent material. Sometimes this is obvious — gravel or bedrock — and sometimes the
+sediment to parent material. Sometimes this is obvious, you feel gravel or hit bedrock, and sometimes the
 transition is into clay or mineral deposits, where the density of the sediment increases
 sharply.
 
@@ -203,7 +203,7 @@ sharply.
 **📋 Record it on the data sheet — plot notes**
 
 Let the data sheet guide what you need to capture. Fill in the top section now: date and
-time, site conditions, weather, and tidal conditions — plus the core's latitude/longitude.
+time, site conditions, weather, and tidal conditions, plus the core's latitude/longitude.
 
 </td>
 <td width="45%">
@@ -267,7 +267,7 @@ latitude/longitude.
 
 *How much did the sediment squash?*
 
-> 💡 **Reduce compaction before you measure it.** The less the sediment is squished, the
+> **Reduce compaction before you measure it.** The less the sediment is squished, the
 > less correction the analysis has to apply. Use the **bevelled edge** of the corer to *cut*
 > through the top layer of sediment that contains the fibrous roots, rather than
 > forcing through it. A gentle **twisting motion** while inserting helps the bevel slice
@@ -514,11 +514,11 @@ using.*
 
 **📋 Record it on the data sheet — sample data**
 
-As you extrude each section, record its **top and bottom depth** — how far the top and bottom
+As you extrude each section, record its **top and bottom depth**, which is measured as how far the top and bottom
 of that slice sit below the sediment surface.
 
 Depths run continuously down the core, so **the bottom of one slice is the top of the next**:
-if section 2 ends at 5 cm, section 3 starts at 5 cm, and so on.
+if section 2 ends at 6 cm, section 3 starts at 6 cm, and so on.
 
 </td>
 <td width="45%">
@@ -537,9 +537,9 @@ The workshop data sheet is included: **[`Eelgrass_Carbon_Datasheet_v2.pdf`](../E
 (blank copies for printing can also live in [`datasheets/`](datasheets/)). It captures
 exactly the fields the analysis expects:
 
-- **Plot notes** — Plot ID, date, study area, time, study site, weather/conditions, project name
-- **Core notes** (once per core) — Core ID, latitude, longitude, depth of corer inserted, length of core extracted
-- **Sample data** (per slice) — Core ID, sample #, top (cm), bottom (cm), notes
+- **Plot notes**: Plot ID, date, study area, time, study site, weather/conditions, project name
+- **Core notes** (once per core): Core ID, latitude, longitude, depth of corer inserted, length of core extracted
+- **Sample data** (per slice): Core ID, sample #, top (cm), bottom (cm), notes
 
 <table>
 <tr>
@@ -547,14 +547,14 @@ exactly the fields the analysis expects:
 
 <img width="100%" alt="Blank field data sheet" src="https://github.com/user-attachments/assets/e137cd19-865a-4ffe-afb2-bcae8abe57c1">
 
-**Blank data sheet** — ready to print and take into the field.
+**Blank data sheet** ready to print and take into the field.
 
 </td>
 <td width="50%">
 
 <img width="100%" alt="Filled-in field data sheet from the Project Planning example" src="https://github.com/user-attachments/assets/db130d40-1347-4a8d-8b46-bc02469f26a1">
 
-**Filled-in example** — the same sheet completed for the eelgrass inlet site from
+**Filled-in example**, the same sheet completed for the eelgrass inlet site from
 [Section 2 — Project Planning](../02_Project_Planning/).
 
 </td>
