@@ -46,7 +46,7 @@ This section covers the five steps of a sampling design.
 
 *Used in Steps 1, 2 and 5.*
 
-Insert image here - <img width="587" height="380" alt="image" src="https://github.com/user-attachments/assets/c7c9226e-72a9-4dc2-874d-82bd60d4b614" />
+<img width="587" height="380" alt="image" src="https://github.com/user-attachments/assets/c7c9226e-72a9-4dc2-874d-82bd60d4b614" />
 
 
 </td>
@@ -56,7 +56,7 @@ Insert image here - <img width="587" height="380" alt="image" src="https://githu
 
 *Used in Step 4.*
 
-Insert this image - <img width="337" height="233" alt="image" src="https://github.com/user-attachments/assets/c30273c4-6855-455f-843f-0f0620db232f" />
+<img width="337" height="233" alt="image" src="https://github.com/user-attachments/assets/c30273c4-6855-455f-843f-0f0620db232f" />
 
 
 </td>
@@ -108,17 +108,14 @@ To visualize how this works, imagine you have an area of land you are interested
 
 To help experiment with how the different inputs affect sampling, please see this  **[Sample Size Visualization Tool](https://blue-carbon-hub.projects.earthengine.app/)**.
 
-
-The clips below come from the **[Sample Size Visualization Tool](https://blue-carbon-hub.projects.earthengine.app/)**.
-
 <table>
 <tr>
-<td width="60%">
+<td width="35%">
 
-<img width="100%" alt="Sample Allocation Visualizer — revealing the true carbon map as samples accumulate" src="images/download%20(2).gif">
+<img width="100%" alt="Sample Size Visualization Tool — revealing the true carbon map as samples accumulate" src="images/sample_viz_reveal.gif">
 
 </td>
-<td width="40%">
+<td width="65%">
 
 The bottom-left map is a hypothetical carbon map, where each square is the carbon value at that location. Switch between the **True value** and the **Revealed** view to watch the map uncover itself one sample at a time.
 
@@ -128,12 +125,12 @@ The bottom-left map is a hypothetical carbon map, where each square is the carbo
 
 <table>
 <tr>
-<td width="60%">
+<td width="35%">
 
-<img width="100%" alt="Sample Allocation Visualizer — estimate converging on the true value as sample size grows" src="images/download%20(3).gif">
+<img width="100%" alt="Sample Size Visualization Tool — estimate converging on the true value as sample size grows" src="images/sample_viz_converge.gif">
 
 </td>
-<td width="40%">
+<td width="65%">
 
 On the right, we see how each sample on the map is combined together to estimate the **true value** (dashed blue line). With a few samples the estimate is off and the error range (purple) is wide. As samples accumulate, it narrows.
 
@@ -148,6 +145,7 @@ On the right, we see how each sample on the map is combined together to estimate
 - Sampling estimates what's impractical to measure directly.
 - The same process that produces an estimate can also tell you whether differences *within* or *between* sites are statistically significant.
 - And it runs **backwards**: fix the precision you want, and it returns the number of cores needed to get there. That's Step 4, see [Appendix A2](#a2--working-backwards-from-precision-to-sample-size).
+
 
 ---
 
