@@ -38,7 +38,7 @@ When a pending resource is added, replace the availability links in the guides
 with its real path and update that list. Do not substitute the archived Tsawwassen
 workbook for the current Cowichan example; their teaching contexts differ.
 
-The Data Interpretation component currently contains an overview and field-to-lab
+The Blue Carbon Data Interpretation component currently contains an overview and field-to-lab
 preparation. Its later sections remain in development.
 
 Green Carbon includes Forests, Grasslands, and Wetlands, each with four core
