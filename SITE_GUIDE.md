@@ -39,7 +39,9 @@ with its real path and update that list. Do not substitute the archived Tsawwass
 workbook for the current Cowichan example; their teaching contexts differ.
 
 The Data Interpretation component currently contains an overview and field-to-lab
-preparation. Its later sections remain in development. Green Carbon includes Forests, Grasslands, and Wetlands, each with four core
+preparation. Its later sections remain in development.
+
+Green Carbon includes Forests, Grasslands, and Wetlands, each with four core
 components, an ecosystem-specific supplement, and a worked example.
 Shared PDFs live in `Green Carbon Workshops/_Shared/`; the configuration explicitly
 includes linked underscore-prefixed resource folders in the published site.
