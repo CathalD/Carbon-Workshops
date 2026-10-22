@@ -5,7 +5,7 @@ A shared website and resource library for ecosystem carbon workshops. Each works
 ## Workshop collections
 
 - [Blue Carbon — Eelgrass](Blue%20Carbon%20Workshops/): Background, Project Planning, Field Methods, Data Interpretation, and a Worked Example.
-- [Green Carbon](Green%20Carbon%20Workshops/): Workshop collection in development, with pages prepared for Grasslands.
+- [Green Carbon](Green%20Carbon%20Workshops/): Forests, Grasslands, and Wetlands, with field guides, calculators, worked examples, and shared resources.
 
 ## Website
 

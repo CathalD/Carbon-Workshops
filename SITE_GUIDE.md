@@ -39,8 +39,10 @@ with its real path and update that list. Do not substitute the archived Tsawwass
 workbook for the current Cowichan example; their teaching contexts differ.
 
 The Data Interpretation component currently contains an overview and field-to-lab
-preparation. Its later sections remain in development. Green Carbon and Grasslands
-have explicit coming-soon pages so participants see their current status.
+preparation. Its later sections remain in development. Green Carbon includes Forests, Grasslands, and Wetlands, each with four core
+components, an ecosystem-specific supplement, and a worked example.
+Shared PDFs live in `Green Carbon Workshops/_Shared/`; the configuration explicitly
+includes linked underscore-prefixed resource folders in the published site.
 
 ## Personal preview and work publishing
 
@@ -56,3 +58,10 @@ base path works. If the name changes, update `baseurl` in `_config.yml`.
 Use the work site's component links when sharing with participants. Before starting
 new preview work, use GitHub's **Sync fork** to bring in work-repository updates.
 Resolve conflicts through the normal GitHub flow; forks do not sync automatically.
+
+## Terrestrial content import
+
+The Green Carbon materials were copied from
+`CathalD/Terrestrial_Carbon_Workshops_V1` at commit `6e13888ba789f2db8385880e198206d1ad2e1ed3`.
+The original repository retains its commit history. Review future source updates
+before importing them so changes made in this repository are preserved.
