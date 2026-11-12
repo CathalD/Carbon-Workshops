@@ -204,6 +204,10 @@ area (kg C/m²) distinct from the estimated total for the study area (Mg C).
 
 [![Quarto report chart comparing study-area stock estimates and uncertainty by method and depth](images/community-analysis-report-totals.png)](images/community-analysis-report-totals.png)
 
+*The map and report captures use a 100 m local mapping grid. The downloaded
+script defaults to 30 m. It skips study-area model uncertainty when the grid
+has more than 10,000 cells, so some error bars shown here may be absent.*
+
 ### How the Gaussian process maps work
 
 Each model is fit at a reporting depth. The local model learns from the workshop
