@@ -8,7 +8,7 @@
 
 ---
 
-> **Component in progress.** The available guide currently covers the overview and field-to-lab preparation. Later analysis sections and the digital downloads are still being prepared. See [resource availability](../resources.md#pending-materials).
+> The guide covers field-to-lab preparation and includes a separate [Community Analysis, Mapping, and Reporting](#community-analysis-mapping-and-reporting) walkthrough. See [resource availability](../resources.md#pending-materials) for materials still in development.
 
 ## Overview
 
@@ -38,7 +38,7 @@ in [Part 2](../02_Project_Planning/):
 Files: the
 > [example digital data sheet](../resources.md#pending-materials), the
 > [example lab results sheet](../resources.md#pending-materials) and the
-> [analysis workflow](../resources.md#pending-materials).
+> [community analysis workflow](#community-analysis-mapping-and-reporting).
 
 ---
 
@@ -128,3 +128,68 @@ compaction factor, and, once lab results arrive, bulk density and carbon stock.
 > blank rather than silently using another core's geometry.
 
 ---
+
+## Community Analysis, Mapping, and Reporting
+
+Follow a worked example from a completed sediment data sheet to carbon-stock
+estimates, maps and a Quarto report. The example uses **12 cores and 120 sediment
+sections with simulated measurements**. It is a separate exercise from the
+field-to-lab example above.
+
+[Open the Community Blue Carbon Analysis and Mapping repository](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping)
+· [Setup and run instructions](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping#run-the-workshop)
+
+### 1. Check the completed data sheet
+
+Open the [example field workbook](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping/blob/main/data/field/blue_carbon_field_cores.xlsm)
+and find the **3. Sediment Data** tab. Each row represents one section of a core.
+Match the plot and core IDs across the workbook. Check that section depths are
+in order, the units are correct, and dry bulk density and organic carbon values
+are present or flagged for review. Keep measured zeros distinct from missing
+values. The example includes core locations and a study boundary so you can
+take the same data through to a map.
+
+[![Example Sediment Data tab with core IDs, section depths, bulk density and organic carbon inputs](images/community-analysis-data-sheet.png)](images/community-analysis-data-sheet.png)
+
+### 2. Run the analysis and explore the maps in R
+
+Download the analysis repository. Install R, Quarto and the R packages listed
+in the setup instructions. Open the downloaded folder as your working directory
+in R or RStudio, then run:
+
+```r
+source("Run_and_Visualize.R")
+view_plot("cores")
+view_map(30)
+view_table("totals")
+```
+
+The runner calculates carbon stock for each core at the 30, 50 and 100 cm targets.
+It sums carbon down to the target or to the sampled bottom, whichever comes first.
+Check the core summary and the number of shorter or flagged cores before comparing
+results at the same depth. Use `view_plot("cores")` to compare the sampled cores
+and `view_map(30)` to explore estimates across the study area. Switch between the
+stock and uncertainty layers to see where estimates are more or less precise.
+
+[![R console running the workshop analysis and showing the example core-stock summary](images/community-analysis-r.png)](images/community-analysis-r.png)
+
+[![Example 0–30 cm carbon-stock map with core locations, a study boundary and a menu for stock and uncertainty layers](images/community-analysis-map.png)](images/community-analysis-map.png)
+
+*The 0–30 cm map shows the local Matérn stock estimate for the simulated example. White dots mark the core locations.*
+
+### 3. Read and report the results
+
+Open `Blue_Carbon_Report.html` in your browser after the run finishes. The
+[Quarto report source](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping/blob/main/Blue_Carbon_Report.qmd)
+contains the methods, tables, figures and interactive maps.
+
+Start with **Summary** to check how many cores contributed at each depth. At
+the 30 cm target, the example mean across the 12 cores is **2.96 kg C/m²**.
+In **Stock across the study boundary**, compare how the estimated total varies
+by method. For your own report, state the depth, study boundary and area,
+number of usable cores, estimation method and uncertainty. Keep stock per unit
+area (kg C/m²) distinct from the estimated total for the study area (Mg C).
+
+[![Quarto report summary with the simulated-data note and stock table by depth](images/community-analysis-report-summary.png)](images/community-analysis-report-summary.png)
+
+[![Quarto report chart comparing study-area stock estimates and uncertainty by method and depth](images/community-analysis-report-totals.png)](images/community-analysis-report-totals.png)

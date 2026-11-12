@@ -19,6 +19,7 @@ title: Downloads & Resources
 
 ## Interactive tools and videos
 
+- [Community Analysis, Mapping, and Reporting](04_Results/#community-analysis-mapping-and-reporting) — example workbook, R analysis and Quarto report.
 - [Blue Carbon Hub sampling design tools](https://blue-carbon-hub.projects.earthengine.app/)
 - [Ecosystem Carbon Accumulation Visualizer](https://cathald.github.io/CarbonAccumulationVisualizer/)
 - [Coastal Blue Carbon workshop video playlist](https://www.youtube.com/playlist?list=PLLsjpJMfNDP5w78ZJNDUvMj1VoRG_qSwd)
@@ -35,7 +36,6 @@ The workshop text refers to the following materials, which are not present in th
 | Example lab-results workbook | Not yet added |
 | Tsawwassen sample-allocation example workbook | Not yet added |
 | Laboratory guide PDF | Not yet added |
-| R data-analysis workflow | Not yet added |
 
 The earlier [Tsawwassen analysis walkthrough](Worked_Example/archive/) includes an archived example workbook. It is retained for historical teaching context and is not the current Cowichan worked example.
 
