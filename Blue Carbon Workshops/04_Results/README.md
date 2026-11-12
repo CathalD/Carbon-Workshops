@@ -52,8 +52,8 @@ You come back from the field with two things:
 <p class="resource-note">The field-sheet and sample-bag illustration is being prepared.</p>
 
 *What to notice: every bag label matches a row on the field sheet — Core ID, Sample ID and depths.
-This is the **constructed Tsawwassen** field example; from Step 2 onwards the analysis uses the
-published Cowichan cores, which have no paper sheet of their own.*
+This is the **constructed Tsawwassen** field example. The community analysis walkthrough below
+starts from its own completed workbook with simulated measurements.*
 
 The rest of this step deals with each in turn, then with getting the samples analysed.
 
@@ -132,9 +132,9 @@ compaction factor, and, once lab results arrive, bulk density and carbon stock.
 ## Community Analysis, Mapping, and Reporting
 
 Follow a worked example from a completed sediment data sheet to carbon-stock
-estimates, maps and a Quarto report. The example uses **12 cores and 120 sediment
-sections with simulated measurements**. It is a separate exercise from the
-field-to-lab example above.
+estimates, maps and a Quarto report. The **Boundary Bay** example uses **12 cores
+and 120 sediment sections with simulated measurements**. It is a separate
+exercise from the field-to-lab example above.
 
 [Open the Community Blue Carbon Analysis and Mapping repository](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping)
 · [Setup and run instructions](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping#run-the-workshop)
@@ -153,9 +153,19 @@ take the same data through to a map.
 
 ### 2. Run the analysis and explore the maps in R
 
-Download the analysis repository. Install R, Quarto and the R packages listed
-in the setup instructions. Open the downloaded folder as your working directory
-in R or RStudio, then run:
+Copy and paste this into the R or RStudio console to download the workshop
+scripts, example data and mapping inputs. Confirm the download location when prompted.
+
+```r
+if (!requireNamespace("usethis", quietly = TRUE)) {
+  install.packages("usethis", repos = "https://cloud.r-project.org")
+}
+usethis::use_course("CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping")
+```
+
+Install Quarto and the R packages listed in the [setup instructions](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping#run-the-workshop).
+Set your R working directory to the extracted folder that contains `Run_and_Visualize.R`.
+In RStudio, use **Session → Set Working Directory → Choose Directory**. Then run:
 
 ```r
 source("Run_and_Visualize.R")
@@ -175,7 +185,7 @@ stock and uncertainty layers to see where estimates are more or less precise.
 
 [![Example 0–30 cm carbon-stock map with core locations, a study boundary and a menu for stock and uncertainty layers](images/community-analysis-map.png)](images/community-analysis-map.png)
 
-*The 0–30 cm map shows the local Matérn stock estimate for the simulated example. White dots mark the core locations.*
+*The 0–30 cm map shows the local Matérn stock estimate for the simulated Boundary Bay example. White dots mark the core locations.*
 
 ### 3. Read and report the results
 
@@ -193,3 +203,87 @@ area (kg C/m²) distinct from the estimated total for the study area (Mg C).
 [![Quarto report summary with the simulated-data note and stock table by depth](images/community-analysis-report-summary.png)](images/community-analysis-report-summary.png)
 
 [![Quarto report chart comparing study-area stock estimates and uncertainty by method and depth](images/community-analysis-report-totals.png)](images/community-analysis-report-totals.png)
+
+### How the Gaussian process maps work
+
+Each model is fit at a reporting depth. The local model learns from the workshop
+cores and their geographic distances. The next two models use the same spatial
+idea to update a starting estimate from Janousek et al. (2025).
+
+<details>
+<summary>1. Local Matérn model using geographic distance</summary>
+
+The local Gaussian process fits a baseline mean to the log stocks of the
+workshop cores. It assumes that deviations from that baseline are more similar
+at nearby locations. The Matérn kernel turns distance $d$ in metres into a
+correlation. With smoothness $\nu = 0.5$, as selected at 30 cm in the example,
+the correlation is $\rho(d) = \exp(-d/\ell)$, where $\ell$ is the distance scale.
+
+One distance matrix compares every core with every other core. The model uses
+it to account for spatial dependence among observations. A second matrix compares
+each core with each prediction cell and determines how strongly the core can
+inform that cell. The fitted nugget adds independent variation to the observed
+cores. In the local model, predictions far from cores tend toward the fitted
+baseline on the log scale.
+
+[Local mapping code](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping/blob/main/Script_2_local_mapping.R)
+
+</details>
+
+<details>
+<summary>2. Start from the Janousek reference cores</summary>
+
+The Bayesian model uses a single regional prior at each depth. It takes the
+mean and standard deviation of complete Janousek profiles from the selected
+Pacific Northwest ecosystem. The teaching run uses the salt-marsh reference
+group. The script matches those two statistics to a lognormal distribution,
+giving a baseline log mean and variance that are initially constant across
+the study area.
+
+The transfer model makes that baseline vary across the map. At each local core
+and prediction cell, it compares the 64 AlphaEarth embedding values with
+the embeddings at the reference cores. Reference cores with higher cosine
+similarity get more weight in the prior mean and spread. With normalized
+embedding vectors $e(s)$ and $e_j$, the normalized weight for reference core $j$
+is proportional to $\exp(e(s)^\top e_j / h)$, where $h$ is the bandwidth.
+This kernel measures similarity in satellite features. The Matérn kernel still
+uses geographic distance to carry the local correction across the map.
+
+[Janousek reference dataset](https://doi.org/10.25573/SERC.28127486)
+· [Regional prior code](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping/blob/main/Script_2.2_Bayesian.R)
+· [Transfer model code](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping/blob/main/Script_3_covariate_transfer.R)
+
+</details>
+
+<details>
+<summary>3. Use the distance matrices to carry local residuals into the map</summary>
+
+At local core $i$, the residual is the observed log stock minus the prior log
+mean at that location, $r_i = \log(C_i) - m_0(s_i)$. A positive residual means the
+core held more carbon than the prior predicted on the log scale. The update
+uses those residuals together:
+
+$$
+m_{\mathrm{updated}}(s_g) = m_0(s_g) + k_g^\top (K + \tau^2 I)^{-1} r
+$$
+
+- $K$ is the core-to-core covariance matrix. Each entry is the Matérn
+  correlation at the distance between the cores, multiplied by their prior
+  log standard deviations. The diagonal term $\tau^2 I$ adds observation
+  variance.
+- $k_g$ is the core-to-cell covariance vector for the prediction cell $s_g$.
+  Each entry uses the corresponding core-to-cell distance and the two prior
+  log standard deviations.
+
+Solving the system accounts for the fact that nearby cores may carry
+overlapping information. The correction fades toward zero where the
+core-to-cell covariance is small, so the estimate returns toward the prior.
+The same covariance calculation reduces the prior variance at cells informed
+by the cores. The script converts the updated log mean and variance back to
+stock in kg C/m².
+
+Try `view_map(30, "transfer")` and switch between **Janousek prior**,
+**Local Matérn correction** and **Updated estimate**. The correction layer
+shows the difference between the updated and prior stock estimates in kg C/m².
+
+</details>

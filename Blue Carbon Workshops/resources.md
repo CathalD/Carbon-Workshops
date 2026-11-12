@@ -14,6 +14,7 @@ title: Downloads & Resources
 | Sample Allocation Calculator | [Excel workbook](02_Project_Planning/BlueCarbon_SampleAllocation_Spreadsheet_V2.xlsx) |
 | Blank field datasheet | [PDF](03_Field_Methods/Eelgrass_Carbon_Datasheet_v2.pdf) |
 | Example field datasheet | [PDF](03_Field_Methods/Eelgrass_Carbon_Datasheet_Example.pdf) |
+| Community analysis example workbook | [Completed sediment workbook](https://github.com/CathalD/BlueCarbon_Community_Carbon_Analysis_Mapping/blob/main/data/field/blue_carbon_field_cores.xlsm) |
 | DIY soil core extractor instructions | [PDF](03_Field_Methods/Making%20a%20soil%20core%20extractor%20doc.pdf) |
 | Coastal Blue Carbon Field Guide | [WWF-Canada PDF](https://wwf.ca/wp-content/uploads/2026/04/Coastal-Blue-Carbon-Field-Guide-FINAL.pdf) |
 
@@ -32,11 +33,11 @@ The workshop text refers to the following materials, which are not present in th
 | Resource | Status |
 |---|---|
 | Blank digital carbon data workbook | Not yet added |
-| Current digital worked-example workbook | Not yet added |
+| Digital workbook for the field-to-lab exercise | Not yet added |
 | Example lab-results workbook | Not yet added |
 | Tsawwassen sample-allocation example workbook | Not yet added |
 | Laboratory guide PDF | Not yet added |
 
-The earlier [Tsawwassen analysis walkthrough](Worked_Example/archive/) includes an archived example workbook. It is retained for historical teaching context and is not the current Cowichan worked example.
+The earlier [Tsawwassen analysis walkthrough](Worked_Example/archive/) includes an archived example workbook for historical teaching context.
 
 [← Blue Carbon workshop overview](./)
